@@ -18,9 +18,6 @@
 # production
 /build
 
-# 3D GLB Models
-/public/models
-
 # misc
 .DS_Store
 *.pem
