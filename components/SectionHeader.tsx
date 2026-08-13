@@ -5,10 +5,10 @@ interface Props {
 
 export default function SectionHeader(props: Props) {
   return (
-		<div className="flex flex-col gap-3 mb-7 items-center">
-			<h1 className="text-8xl font-bold">{props.title}</h1>
+		<div className="flex flex-col gap-2 mb-2 items-center relative z-50">
+			<h1 className="text-5xl font-bold">{props.title}</h1>
 			{props.description && (
-				<div className="rounded-full bg-[#919191] p-3 text-2xl mt-3 w-fit">
+				<div className="rounded-full bg-[#919191] text-sm p-2 w-fit">
 					{props.description}
 				</div>
 			)}

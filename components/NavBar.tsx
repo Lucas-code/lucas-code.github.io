@@ -141,26 +141,26 @@ export default function NavBar() {
           </DrawerContent>
         </Drawer>
       ) : ( */}
-        <nav className={`${stopped ? `absolute bottom-0` : "fixed top-0"} w-full flex justify-between items-center p-9 bg-transparent z-100`}>
-          <div id="page-links" className="flex gap-6 bg-[#919191] h-[70px] items-center rounded-full">
+        <nav className={`${stopped ? `absolute bottom-0` : "fixed top-0"} w-full flex justify-between items-center p-6 bg-transparent z-100`}>
+          <div id="page-links" className="flex gap-5 bg-[#919191] items-center rounded-full">
             <Button
               variant="ghost"
               onClick={() => { scrollToSection("about"); }}
-              className={`h-full py-5 px-10 rounded-full cursor-pointer hover:bg-[#ebebeb]/60 ${currentSection === "about" ? "bg-[#3795cf]" : ""}`}
+              className={`h-full py-3 px-5 rounded-full cursor-pointer hover:bg-[#ebebeb]/60 ${currentSection === "about" && "bg-[#3795cf]"}`}
             >
               About
             </Button>
             <Button
               variant="ghost"
               onClick={() => { scrollToSection("experience"); }}
-              className={`h-full py-5 px-10 rounded-full cursor-pointer hover:bg-[#ebebeb]/60 ${currentSection === "experience" ? "bg-[#3795cf]" : ""}`}
+              className={`h-full py-3 px-5 rounded-full cursor-pointer hover:bg-[#ebebeb]/60 ${currentSection === "experience" && "bg-[#3795cf]"}`}
             >
               Experience
             </Button>
             <Button
               variant="ghost"
               onClick={() => { scrollToSection("projects"); }}
-              className={`h-full py-5 px-10 rounded-full cursor-pointer hover:bg-[#ebebeb]/60 ${currentSection === "projects" ? "bg-[#3795cf]" : ""}`}
+              className={`h-full py-3 px-5 rounded-full cursor-pointer hover:bg-[#ebebeb]/60 ${currentSection === "projects" && "bg-[#3795cf]"}`}
             >
               Projects
             </Button>
@@ -173,14 +173,14 @@ export default function NavBar() {
             </Button> */}
           </div>
           {isDesktop ? (
-          <div id="social-links" className="flex gap-4 bg-[#919191] rounded-full">
-            <Link href="https://github.com/Lucas-code" target="_blank" className="py-5 px-6 rounded-full cursor-pointer hover:bg-[#ebebeb]">
+          <div id="social-links" className="flex gap-2 bg-[#919191] rounded-full">
+            <Link href="https://github.com/Lucas-code" target="_blank" className="py-3 px-3 rounded-full cursor-pointer hover:bg-[#ebebeb]">
               <FaGithubSquare size={30} />
             </Link>
-            <Link href="https://www.linkedin.com/in/lucas-pango/" target="_blank" className="py-5 px-6 rounded-full cursor-pointer hover:bg-[#ebebeb]">
+            <Link href="https://www.linkedin.com/in/lucas-pango/" target="_blank" className="py-3 px-3 rounded-full cursor-pointer hover:bg-[#ebebeb]">
               <FaLinkedin size={30} />
             </Link>
-            <Link href="https://www.fiverr.com/s/VYa0G2z" target="_blank" className="py-5 px-6 rounded-full cursor-pointer hover:bg-[#ebebeb]">
+            <Link href="https://www.fiverr.com/s/VYa0G2z" target="_blank" className="py-3 px-3 rounded-full cursor-pointer hover:bg-[#ebebeb]">
               <RiFiverrFill size={30} />
             </Link>
           </div>

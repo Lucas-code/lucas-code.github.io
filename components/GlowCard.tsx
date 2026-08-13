@@ -27,7 +27,7 @@ export default function GlowCard(props : Props) {
 
 	return (
 			<div
-				className={`card card-border rounded-xl p-10 ${props.className}`}
+				className={`card card-border rounded-xl p-3 ${props.className ?? ""}`}
 				ref={ref}
 				onMouseMove={onMouseMove}
 			>
