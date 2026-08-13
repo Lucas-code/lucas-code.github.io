@@ -12,7 +12,7 @@ interface Props {
 
 export function ButtonCTA( props: Props) {
 	return (
-		<a href={props.link ?? undefined} onClick={props.onClick ?? undefined} target="_blank" className={`${props.className ?? ""} cta-wrapper`}>
+		<a href={props.link ?? undefined} onClick={props.onClick ?? undefined} target="_blank" className={`${props.className ?? ""} cta-wrapper w-60 `}>
 			<div className="cta-button group">
 				<div className="bg-circle" />
 				<p className="text">{props.text ?? "Check it out!"}</p>

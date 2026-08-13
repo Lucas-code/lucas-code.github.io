@@ -64,47 +64,44 @@ export default function Contact() {
 	}
 
 	return (
-		<div id="contact" className="flex flex-col min-h-screen">
+		<div id="contact" className="flex flex-col h-screen justify-between">
 			<SectionHeader title="Contact" description="📬 Get in touch with me" />
-			<div className="grid grid-cols-1 lg:grid-cols-2 flex-1 p-10 items-center">
-				<Card className="">
+			<div className="grid grid-cols-1 md:grid-cols-2 py-2 px-5 items-center">
+				<Card className="gap-2 2xl:gap-5">
 					<CardHeader>
-						<CardTitle className="text-7xl">Contact Form</CardTitle>
-						<CardDescription className="text-3xl">Send any questions or messages my way</CardDescription>
+						<CardTitle className="text-3xl">Contact Form</CardTitle>
+						<CardDescription className="text-lg">Send any questions or messages my way</CardDescription>
 					</CardHeader>
 					<CardContent>
 						<form id="contact-form" onSubmit={handleFormSubmit} className="" ref={formRef}>
 							<FieldGroup>
 								<Field>
-									<FieldLabel className="text-3xl">Name</FieldLabel>
+									<FieldLabel className="text-lg">Name</FieldLabel>
 									<Input
 										placeholder="Enter your name"
 										name="name"
 										value={formData.name}
 										onChange={handleFormChange}
-										style={{ fontSize: "large" }}
 									/>
 									{error?.name && <FieldError className="text-red-500 text-sm">{error.name[0]}</FieldError>}
 								</Field>
 								<Field>
-									<FieldLabel className="text-3xl">Email</FieldLabel>
+									<FieldLabel className="text-lg">Email</FieldLabel>
 									<Input
 										placeholder="Enter your email"
 										name="email"
 										value={formData.email}
 										onChange={handleFormChange}
-										style={{ fontSize: "large" }}
 									/>
 									{error?.email && <FieldError className="text-red-500 text-sm">{error.email[0]}</FieldError>}
 								</Field>
 								<Field>
-									<FieldLabel className="text-3xl">Message</FieldLabel>
+									<FieldLabel className="text-lg">Message</FieldLabel>
 									<Textarea
 										placeholder="Enter your message"
 										name="message"
 										value={formData.message}
 										onChange={handleFormChange}
-										style={{ fontSize: "large" }}
 										className="overflow-y-auto max-h-60"
 									/>
 									{error?.message && <FieldError className="text-red-500 text-sm">{error.message[0]}</FieldError>}
@@ -116,26 +113,26 @@ export default function Contact() {
 						<Button
 							type="submit"
 							form="contact-form"
-							className="w-1/5 h-15 text-3xl"
+							className="w-2/5 h-10 text-xl"
 							disabled={loading}
 						>
 							Submit
 						</Button>
 					</CardFooter>
 				</Card>
-				<div className="h-full w-full">
+				<div className="w-full h-full">
 					<HeroModel />
 				</div>
 			</div>
-			<div className="flex flex-col items-center gap-10">
-				<div className="flex col-start-2 gap-20">
+			<div className="flex flex-col items-center gap-3 py-2">
+				<div className="flex col-start-2 gap-10">
 					<a
 						href="https://github.com/Lucas-code"
 						target="_blank"
 						rel="noreferrer noopener"
 						className="p-3 border border-gray-800 rounded-lg hover:bg-input/50"
 					>
-						<FaGithubSquare className="size-15" />
+						<FaGithubSquare className="size-5" />
 					</a>
 					<a
 						href="https://www.linkedin.com/in/lucas-pango/"
@@ -143,7 +140,7 @@ export default function Contact() {
 						rel="noreferrer noopener"
 						className="p-3 border border-gray-800 rounded-lg hover:bg-input/50"
 					>
-						<FaLinkedin className="size-15" />
+						<FaLinkedin className="size-5" />
 					</a>
 					<a
 						href="https://www.fiverr.com/s/VYa0G2z"
@@ -151,7 +148,7 @@ export default function Contact() {
 						rel="noreferrer noopener"
 						className="p-3 border border-gray-800 rounded-lg hover:bg-input/50"
 					>
-						<RiFiverrFill className="size-15" />
+						<RiFiverrFill className="size-5" />
 					</a>
 				</div>
 				<div className="">

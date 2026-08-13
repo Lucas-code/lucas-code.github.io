@@ -125,7 +125,7 @@ body {
 .slider {
   display: inline-block;
   overflow: hidden;
-  height: 40px;
+  height: 30px;
   transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
 }
 
@@ -185,7 +185,7 @@ body {
 .section, #contact {
   min-height: 100vh;
   /* width: 100%; */
-  padding-block: calc(var(--spacing) * 10);
+  padding-block: calc(var(--spacing) * 5);
   /* padding-inline: calc(var(--spacing) * 10); */
 }
 
@@ -202,7 +202,7 @@ body {
 
 .timeline-wrapper {
   /* @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center; */
-  @apply absolute top-0 lg:left-20 left-10 h-full flex justify-center;
+  @apply absolute px-5 top-0 lg:left-10 left-10 h-full flex justify-center;
 }
 
 .timeline {
@@ -214,7 +214,7 @@ body {
 } */
 
 .cta-wrapper {
-    @apply relative z-20 cursor-pointer inline-block;
+    @apply relative z-20 cursor-pointer inline-block hover:border hover:border-[#3795cf] rounded-lg;
   }
 
   .cta-button {
@@ -223,21 +223,21 @@ body {
 
     .bg-circle {
       @apply absolute -right-5 origin-center top-1/2 -translate-y-1/2 
-        w-[120%] h-[120%] group-hover:size-20 group-hover:right-5
+        w-[120%] h-[120%] group-hover:size-13 group-hover:right-5
         rounded-full bg-[#3795cf] transition-all duration-500;
     }
 
     .text {
-      @apply text-3xl text-black transition-all duration-500
+      @apply text-xl text-black transition-all duration-500
         group-hover:text-white group-hover:-translate-x-5 translate-x-0;
     }
 
     .icon-wrapper {
-      @apply size-20 rounded-full absolute right-5 top-1/2 
+      @apply size-13 rounded-full absolute right-5 top-1/2 
         -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       * {
-        @apply size-10 -translate-y-32 group-hover:translate-y-0 transition-all duration-500;
+        @apply size-6 -translate-y-32 group-hover:translate-y-0 transition-all duration-500;
       }
     }
   }
@@ -309,7 +309,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 12px;
-  border: 6px solid transparent;
+  border: 3px solid transparent;
   background: var(--gradient);
   background-attachment: fixed;
   mask: linear-gradient(#0000, #0000),
@@ -346,7 +346,7 @@ body {
 }
 
 .gradient-edge {
-    @apply w-36 h-full absolute bottom-0 z-20;
+    @apply w-18 md:w-36 h-full absolute bottom-0 z-20;
   }
 
 .gradient-edge:nth-of-type(1) {
@@ -396,7 +396,7 @@ body {
 }
 
 .hero-gradient {
-  @apply h-108 w-full absolute bottom-0 z-20;
+  @apply h-32 w-full absolute bottom-0 z-20;
 }
 
 .hero-gradient:nth-of-type(1) {

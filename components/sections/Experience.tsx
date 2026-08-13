@@ -13,7 +13,7 @@ import { Avatar, AvatarFallback } from "../ui/avatar";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Experience() {
-	const { is1280px } = useBreakpoints();
+	const { is768px } = useBreakpoints();
 
 	useGSAP(() => {
 		gsap.to(".timeline", {
@@ -49,26 +49,26 @@ export default function Experience() {
 	return (
 		<section id="experience" className="section">
 			<SectionHeader title="Experience" description="💼 My professional journey" />
-            <div className="relative xl:w-8/10 xl:place-self-center">
+            <div className="relative xl:place-self-center">
                 {experienceInfo.map((info, index) => (
-                    <div key={index} className="flex">
+                    <div key={index} className="flex px-5">
                         <div className="timeline-wrapper">
                             <div className="timeline" />
                             <div className="gradient-line w-1 h-full" />
                         </div>
                         <div className="expText flex gap-10 mb-20 z-50">
-                            <div className="flex flex-none rounded-full size-20 lg:size-40 overflow-hidden outline-black dark:outline-white outline-2">
+                            <div className="flex flex-none rounded-full size-20 overflow-hidden outline-black dark:outline-white outline-2">
                                 <img src={info.icon} alt={info.company}/>
                             </div>
 
-                            <div className="flex flex-col gap-2 lg:w-8/10 mt-5 mb-8">
-                                <h1 className="text-6xl font-bold">{info.company}</h1>
-                                <h2 className="text-3xl">{info.title}</h2>
-                                <p className="text-xl">📅 {info.duration}</p>
+                            <div className="flex flex-1 flex-col gap-2 lg:w-8/10 mt-5">
+                                <h1 className="text-2xl md:text-4xl font-bold">{info.company}</h1>
+                                <h2 className="text-xl md:text-2xl">{info.title}</h2>
+                                <p className="text-lg md:text-xl">📅 {info.duration}</p>
                                 {info.responsibilities && (
                                     <>
-                                        <h3 className="text-3xl text-gray-400 italic">Responsibilities</h3>
-                                        <ul className="flex flex-col gap-6 mt-5 list-disc list-inside text-2xl">
+                                        <h3 className="text-lg md:text-xl text-gray-400 italic">Responsibilities</h3>
+                                        <ul className="flex flex-col gap-3 mt-2 list-disc list-inside text-sm md:text-md">
                                             {info.responsibilities.map((r, index) => (
                                                 <li key={index} dangerouslySetInnerHTML={{ __html: r }} />
                                             ))}
@@ -80,17 +80,17 @@ export default function Experience() {
                     </div>
                 ))}
             </div>
-			<div id="freelance-experience" className="mt-40 mb-20">
-				<h1 className="text-7xl mb-8 text-center font-bold">Freelance Experience</h1>
+			<div id="freelance-experience" className="mt-20 mb-10 px-4 relative z-50">
+				<h1 className="text-5xl mb-8 text-center font-bold">Freelance Experience</h1>
 				<div className="grid grid-cols-1 lg:grid-cols-2">
 					{/* {!is1024px && ( */}
-						<img src="/assets/fiverr.jpg" alt="Fiverr Logo" className="justify-self-center self-center size-100 xl:size-150 rounded-full my-10 lg:my-0" />
+						<img src="/assets/fiverr.jpg" alt="Fiverr Logo" className="justify-self-center self-center size-70 lg:size-100 rounded-full my-5 lg:my-0" />
 					{/* )} */}
 					<div>
-						<ul className="list-disc text-3xl mb-10 flex flex-col gap-3">
+						<ul className="list-disc mb-5 flex flex-col px-5">
 							<li>Developed software solutions for clients from <b>6 different countries</b></li>
 							<li>Completed a variety of projects, including:</li>
-							<ul className="list-disc list-inside ml-10 font-bold">
+							<ul className="list-disc list-inside ml-2 font-bold">
 								<li>Web Scrapers</li>
 								<li>Web Apps</li>
 								<li>Discord Bots</li>
@@ -99,7 +99,7 @@ export default function Experience() {
 							</ul>
 							<li>Received multiple high-rated reviews, highlighting <b>excellent communication</b> and meeting <b>delivery timelines</b></li>
 						</ul>
-						<div className="grid grid-cols-2 gap-10">
+						<div className="grid grid-cols-2 gap-5">
 							<GlowCard>
 								<>
 									<CountUp
@@ -107,9 +107,9 @@ export default function Experience() {
 										duration={1.5}
 										autoAnimate
 										autoAnimateOnce={false}
-										className="text-6xl font-bold"
+										className="text-xl font-bold"
 									/>
-									<p className="text-2xl text-gray-400">Orders Completed</p>
+									<p className="text-gray-400">Orders Completed</p>
 								</>
 							</GlowCard>
 							<GlowCard>
@@ -120,9 +120,9 @@ export default function Experience() {
 										suffix="+"
 										autoAnimate
 										autoAnimateOnce={false}
-										className="text-6xl font-bold"
+										className="text-xl font-bold"
 									/>
-									<p className="text-2xl text-gray-400">Clients</p>
+									<p className="text-gray-400">Clients</p>
 								</>
 							</GlowCard>
 							<GlowCard className="col-span-2">
@@ -133,30 +133,30 @@ export default function Experience() {
 										suffix="+"
 										autoAnimate
 										autoAnimateOnce={false}
-										className="text-6xl font-bold"
+										className="text-xl font-bold"
 									/>
-									<p className="text-2xl text-gray-400">5-Star Reviews</p>
+									<p className="text-gray-400">5-Star Reviews</p>
 								</>
 							</GlowCard>
 						</div>
 					</div>
 				</div>
 				<div className="mt-20">
-					<h1 className="text-5xl font-bold text-center">Client Reviews</h1>
+					<h1 className="text-4xl font-bold text-center">Client Reviews</h1>
 					<div className="relative mt-10">
 						<div className="gradient-edge" />
 						<div className="gradient-edge" />
 
-						<div className="marquee h-100">
-							<div className="marquee-box gap-12">
+						<div className="marquee h-70">
+							<div className="marquee-box gap-6 md:gap-12">
 								{fiverrReviews.map((review, index) => (
-									<div key={index} className="flex flex-col justify-between h-full w-150 bg-zinc-800 rounded-xl p-5">
-										<div className="flex gap-3">
+									<div key={index} className="flex flex-col justify-between h-full w-40 md:w-70 bg-zinc-800 rounded-xl p-5">
+										<div className="flex gap-1">
 											{Array.from({ length: 5 }, (_, i) => {
 												const fillPercentage = Math.min(100, Math.max(0, (review.rating - i) * 100));
 
 												return (
-													<span key={i} className="relative inline-block size-10 mask-[url('/assets/star.png')] mask-cover">
+													<span key={i} className="relative inline-block size-3 md:size-5 mask-[url('/assets/star.png')] mask-cover">
 														<div className="bg-white w-full h-full">
 															<div className="h-full bg-yellow-300" style={{ width: `${fillPercentage}%` }} />
 														</div>
@@ -164,14 +164,14 @@ export default function Experience() {
 													</span>
 											)})}
 										</div>
-										<p className="text-2xl">{review.review}</p>
+										<p className="text-xs md:text-md">{review.review}</p>
 										<div className="flex gap-3 items-center mt-3">
-											<Avatar size="lg">
+											<Avatar size={`${is768px ? 'sm' : 'lg'}`}>
 												<AvatarFallback>
 													{review.client.slice(0,2).toUpperCase()}
 												</AvatarFallback>
 											</Avatar>
-											<p className="text-gray-400 text-2xl">{review.client}</p>
+											<p className="text-xs md:text-md text-gray-400">{review.client}</p>
 										</div>
 									</div>
 								))}
